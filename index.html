@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Graphing</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Graphing</h1>
+        <div class="row">
+            <div class="col-md-4" id="panel" style="height: 70vh;">
+                <select name="graph-type" id="graph-type" style="width: 100%; height: 15%;">
+                    <option value="undirected">Undirected Graph</option>
+                    <option value="directed">Directed Graph</option>
+                </select>
+                <textarea name="vertex" id="vertex" style="width: 100%; height: 70%;"
+                    placeholder="node1 node2 weight"></textarea>
+                <button id="draw" href="#" style="width: 100%; height: 15%">Draw</button>
+            </div>
+            <div class="col-md-8">
+                <div id="graph" style="width: 100%; height: 100%;"></div>
+            </div>
+        </div>
+        <div class="row" id="graph-info">
+            <div class="col-md-10" style="padding-left: 0;">
+                <input type="text" id="graph-string" style="width: 100%; height: 5vh; border: 2px solid black;">
+            </div>
+            <div class="col-md-1" style="padding-left: 0;">
+                <button onclick="copy()" style="width: 100%; height: 5vh; border: 2px solid black;">copy</button>
+            </div>
+            <div class="col-md-1" style="padding-left: 0;">
+                <button id="draw-string" style="width: 100%; height: 5vh; border: 2px solid black;">draw</button>
+            </div>
+        </div>
+    </div>
+    <script src="node_modules/d3.v4.min.js"></script>
+    <script src="node_modules/viz.js/viz.js" type="javascript/worker"></script>
+    <script src="node_modules/d3-graphviz/build/d3-graphviz.min.js"></script>
+    <script src="js/index.js"></script>
+    <script>
+        function copy() {
+            var field = document.getElementById('graph-string');
+            field.select();
+            field.setSelectionRange(0, 99999);
+            document.execCommand('copy');
+        }
+    </script>
+</body>
+
+</html>

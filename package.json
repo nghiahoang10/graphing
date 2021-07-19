@@ -1,0 +1,22 @@
+{
+  "name": "graphing",
+  "version": "1.0.0",
+  "description": "graph visualizer",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nghiahoang10/graphing.git"
+  },
+  "author": "Nghia Hoang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nghiahoang10/graphing/issues"
+  },
+  "homepage": "https://github.com/nghiahoang10/graphing#readme",
+  "dependencies": {
+    "d3-graphviz": "^2.6.0"
+  }
+}
