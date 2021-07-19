@@ -1,8 +1,8 @@
 {
   "name": "graphing",
   "version": "1.0.0",
-  "description": "graph visualizer",
-  "main": "app.js",
+  "description": "automatic graphing",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/nghiahoang10/graphing#readme",
   "dependencies": {
-    "d3-graphviz": "^2.6.0"
+    "d3-graphviz": "^4.0.0"
   }
 }

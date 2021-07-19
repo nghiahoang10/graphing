@@ -28,7 +28,6 @@ var generateGraphString = function () {
         graphString += style + from + nodeStyle + to + nodeStyle + edge + ';';
     }
     graphString += '}';
-    console.log(graphString)
     return graphString;
 }
 
