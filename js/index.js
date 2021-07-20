@@ -18,12 +18,12 @@ var generateGraphString = function () {
         if (pair.length < 1) {
             continue;
         }
-        if (pair.split(' ').length < 2) {
+        if (pair.split(/\s+/).length < 2) {
             return undefined;
         }
-        var from = pair.split(' ')[0];
-        var to = pair.split(' ')[1];
-        var weight = pair.split(' ').length > 2 ? pair.split(' ')[2] : ' ';
+        var from = pair.split(/\s+/)[0];
+        var to = pair.split(/\s+/)[1];
+        var weight = pair.split(/\s+/).length > 2 ? pair.split(/\s+/)[2] : ' ';
         var edge = from + ' ' + direction + ' ' + to + (weight == '' ? '' : '[label=\"' + weight + '\"]');
         graphString += style + from + nodeStyle + to + nodeStyle + edge + ';';
     }

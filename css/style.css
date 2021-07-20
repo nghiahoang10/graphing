@@ -56,6 +56,10 @@ h1 {
     padding-top: 3vh;
 }
 
+#graph-container {
+    height: 70vh;
+}
+
 #graph {
     border: 2px solid black;
 }
@@ -80,10 +84,24 @@ h1 {
 #panel {
     padding: 10px;
     border: 2px solid black;
+    height: 70vh;
 }
 
 #graph-info {
     padding-top: 3vh;
     padding-left: 0;
     padding-right: 0;
+}
+
+@media screen and (max-width: 768px) {
+    #panel {
+        height: 40vh;
+    }
+    #graph-container {
+        height: 50vh;
+    }
+    .container {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
 }

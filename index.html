@@ -20,7 +20,7 @@
     <div class="container">
         <h1>Graphing</h1>
         <div class="row">
-            <div class="col-md-4" id="panel" style="height: 70vh;">
+            <div class="col-md-4" id="panel">
                 <select name="graph-type" id="graph-type" style="width: 100%; height: 15%;">
                     <option value="undirected">Undirected Graph</option>
                     <option value="directed">Directed Graph</option>
@@ -29,7 +29,7 @@
                     placeholder="node1 node2 [weight]"></textarea>
                 <button id="draw" href="#" style="width: 100%; height: 15%">Draw</button>
             </div>
-            <div class="col-md-8" style="height: 70vh;">
+            <div class="col-md-8" id="graph-container">
                 <div id="graph" style="width: 100%; height: 100%;"></div>
             </div>
         </div>
